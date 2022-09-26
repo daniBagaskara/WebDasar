@@ -8,14 +8,14 @@ body {
   font-family: "Quicksand", sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('../image/background.webp');
+  background-image: url("../image/background.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .jumbotron {
   padding: 60px;
-  background-color: #FD841F;
+  background-color: #8bbccc;
   text-align: center;
   font-size: 20px;
   color: white;
@@ -43,13 +43,13 @@ nav a:hover {
 footer {
   padding: 20px;
   color: white;
-  background-color: #E38B29;
+  background-color: #4c6793;
   text-align: center;
   font-weight: bold;
 }
 
 .featured-image {
-  width: 100%;
+  max-width: 100%;
   max-height: 300px;
   object-fit: cover;
   object-position: center;
@@ -67,14 +67,6 @@ footer {
   background-color: white;
 }
 
-.jumbotron {
-  padding: 60px;
-  background-color: #FD841F;
-  text-align: center;
-  font-size: 20px;
-  color: white;
-}
-
 nav li {
   display: inline;
   list-style-type: none;
@@ -82,7 +74,7 @@ nav li {
 }
 
 nav {
-  background-color: #E14D2A;
+  background-color: #4c6793;
   padding: 5px;
   position: sticky;
   top: 0;
@@ -117,7 +109,6 @@ aside {
 }
 
 @media screen and (max-width: 1000px) {
-
   #content,
   aside {
     width: 100%;
