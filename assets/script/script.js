@@ -1,17 +1,26 @@
-// window.addEventListener("scroll", function() {
-//   const distance = window.scrollY
-//   document.querySelector("header").style.transform = `translateY(${distance *
-//     1}px)`
-//   document.querySelector(
-//     ".container"
-//   ).style.transform = `translateY(${distance * 0.3}px)`
-//   setTimeout(() => {
-//     document.querySelector(".quote").classList.add("animate-me")
-//   }, 400)
-// })
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector("#loader").style.visibility = "visible";
+  } else {
+    document.querySelector("#loader").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
+  }
+};
 
-window.addEventListener("scoll",function(){
-  var wscroll = window.scrollTop;
+const links = document.querySelectorAll("nav ul a");
 
-  console.log(wscroll)
-})
+for (const link of links) {
+  link.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop - 100;
+
+  scroll({
+    top: offsetTop,
+    behavior: "smooth"
+  });
+}
