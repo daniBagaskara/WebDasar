@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
   box-sizing: border-box;
@@ -65,10 +65,8 @@ footer {
 }
 
 .card_article {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
   background-color: white;
 }
 
@@ -123,10 +121,8 @@ aside {
   max-width: 1120px;
   width: 100%;
   padding: 40px 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
-
 
 .slide-content {
   margin: 0 40px;
@@ -135,9 +131,7 @@ aside {
 
 .card {
   border-radius: 25px;
-  background-color: rgb(124, 183, 196);
 }
-
 
 .image-content,
 .card-content {
@@ -150,13 +144,13 @@ aside {
 .image-content {
   position: relative;
   row-gap: 5px;
-  padding: 25px 0;
+  padding-top: 20px;
 }
 
 .card-image {
   position: relative;
   max-width: 180px;
-  background: #FFF;
+  background: #fff;
   padding: 3px;
 }
 
@@ -178,12 +172,39 @@ aside {
   text-align: center;
 }
 
-@media screen and (max-width: 1000px) {
+#loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
 
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@media screen and (max-width: 1000px) {
   #content,
   aside {
     width: 100%;
     padding: 0;
+  }
+
+  .quote {
+    flex-direction: column;
   }
 }
 
